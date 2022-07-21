@@ -7,6 +7,7 @@ def octet_verify(new_address):
         elif int(octet) < 0 or int(octet) > 255:
             print("Please enter addresses between 0 and 255")
             answer = False
+            break
     return answer
 
 
