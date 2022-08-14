@@ -28,11 +28,15 @@ def searchjoke(query):
             dict = jokes_dict[x]
             print(dict['joke'])
     else:
-        print("I guess there was no match for the subject you chose, better luck next time.")
+        print("I guess there was no match for the subject you chose, please enter a different subject.")
+        dadjoke()
 
-response = input("Please tell me what joke subject you are looking for \n Pressing Enter will give you a random joke:  ")
-print()
-if len(response) == 0:
-    randjoke()
-else:
-    searchjoke(response)
+def dadjoke():
+    response = input("Please tell me what joke subject you are looking for. \nPressing Enter will give you a random joke:  ")
+    print()
+    if len(response) == 0:
+        randjoke()
+    else:
+        searchjoke(response)
+
+dadjoke()
